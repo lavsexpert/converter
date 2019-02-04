@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,70 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click Update for the Answer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PnK-w0-TN7">
+                                <rect key="frame" x="80.5" y="323" width="214" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oCU-oc-Sr8">
+                                <rect key="frame" x="50" y="211" width="163" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="G0M-Kd-LGi">
+                                <rect key="frame" x="50" y="249" width="275" height="29"/>
+                                <segments>
+                                    <segment title="&lt;unit_two&gt;"/>
+                                    <segment title="&lt;unit_three&gt;"/>
+                                    <segment title="&lt;unit_four"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0QF-0K-NGP">
+                                <rect key="frame" x="162" y="285" width="51" height="30"/>
+                                <state key="normal" title="Update"/>
+                                <connections>
+                                    <action selector="updateButton:" destination="BYZ-38-t0r" eventType="touchDown" id="3AY-Bo-g7w"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="in &lt;unit one&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zae-bO-LSp">
+                                <rect key="frame" x="224" y="216" width="101" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PnK-w0-TN7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2yo-O5-yNK"/>
+                            <constraint firstItem="Zae-bO-LSp" firstAttribute="trailing" secondItem="G0M-Kd-LGi" secondAttribute="trailing" id="C6v-gl-Mkb"/>
+                            <constraint firstItem="oCU-oc-Sr8" firstAttribute="leading" secondItem="G0M-Kd-LGi" secondAttribute="leading" id="Drg-oc-dne"/>
+                            <constraint firstItem="0QF-0K-NGP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PeP-Wo-mva"/>
+                            <constraint firstItem="G0M-Kd-LGi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RBR-3c-Jl1"/>
+                            <constraint firstItem="G0M-Kd-LGi" firstAttribute="top" secondItem="Zae-bO-LSp" secondAttribute="bottom" constant="12" id="UX5-lq-fz5"/>
+                            <constraint firstItem="oCU-oc-Sr8" firstAttribute="trailing" secondItem="0QF-0K-NGP" secondAttribute="trailing" id="Ucv-uX-jwS"/>
+                            <constraint firstItem="G0M-Kd-LGi" firstAttribute="top" secondItem="oCU-oc-Sr8" secondAttribute="bottom" constant="8" id="mXv-Lh-pHr"/>
+                            <constraint firstItem="PnK-w0-TN7" firstAttribute="top" secondItem="0QF-0K-NGP" secondAttribute="bottom" constant="8" id="prL-zi-tY7"/>
+                            <constraint firstItem="PnK-w0-TN7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qtz-2M-Bwy"/>
+                            <constraint firstItem="0QF-0K-NGP" firstAttribute="top" secondItem="G0M-Kd-LGi" secondAttribute="bottom" constant="8" id="uuu-NH-2io"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="inputField" destination="oCU-oc-Sr8" id="FIz-3g-Wez"/>
+                        <outlet property="outputField" destination="PnK-w0-TN7" id="x48-0O-skT"/>
+                        <outlet property="segmentController" destination="G0M-Kd-LGi" id="mbJ-cw-bVu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-82.400000000000006" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
