@@ -24,29 +24,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oCU-oc-Sr8">
-                                <rect key="frame" x="50" y="211" width="163" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input measurement here" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oCU-oc-Sr8">
+                                <rect key="frame" x="39.5" y="211" width="206.5" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="G0M-Kd-LGi">
-                                <rect key="frame" x="50" y="249" width="275" height="29"/>
+                                <rect key="frame" x="39.5" y="249" width="296" height="29"/>
                                 <segments>
-                                    <segment title="&lt;unit_two&gt;"/>
-                                    <segment title="&lt;unit_three&gt;"/>
-                                    <segment title="&lt;unit_four"/>
+                                    <segment title="meter/second"/>
+                                    <segment title="knots"/>
+                                    <segment title="mile/hour"/>
                                 </segments>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0QF-0K-NGP">
-                                <rect key="frame" x="162" y="285" width="51" height="30"/>
+                                <rect key="frame" x="129" y="285" width="117" height="30"/>
                                 <state key="normal" title="Update"/>
                                 <connections>
                                     <action selector="updateButton:" destination="BYZ-38-t0r" eventType="touchDown" id="3AY-Bo-g7w"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="in &lt;unit one&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zae-bO-LSp">
-                                <rect key="frame" x="224" y="216" width="101" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="in km/hour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zae-bO-LSp">
+                                <rect key="frame" x="254" y="216" width="81.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -55,6 +55,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="PnK-w0-TN7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2yo-O5-yNK"/>
+                            <constraint firstItem="Zae-bO-LSp" firstAttribute="leading" secondItem="oCU-oc-Sr8" secondAttribute="trailing" constant="8" id="584-b3-z7j"/>
                             <constraint firstItem="Zae-bO-LSp" firstAttribute="trailing" secondItem="G0M-Kd-LGi" secondAttribute="trailing" id="C6v-gl-Mkb"/>
                             <constraint firstItem="oCU-oc-Sr8" firstAttribute="leading" secondItem="G0M-Kd-LGi" secondAttribute="leading" id="Drg-oc-dne"/>
                             <constraint firstItem="0QF-0K-NGP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PeP-Wo-mva"/>
